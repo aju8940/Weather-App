@@ -1,4 +1,7 @@
-const API_KEY = '7a3afbd64a28338742f094c7cfbf4efd'
+require('dotenv').config();
+
+const API_KEY = process.env.API_KEY;
+
 const makeIconUrl = (iconId) => `https://openweathermap.org/img/wn/${iconId}@2x.png`
 
 const getWeatherData = async (city, units = 'metric') => {
